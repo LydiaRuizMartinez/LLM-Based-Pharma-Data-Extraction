@@ -1,0 +1,17 @@
+# Deep Learning & LLMs
+torch
+transformers
+accelerate
+bitsandbytes
+
+# PDF Processing
+PyMuPDF
+
+# Data Processing
+pandas
+
+# Data Validation
+pydantic
+
+# Jupyter Notebook
+ipykernel

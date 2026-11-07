@@ -7,8 +7,9 @@ bitsandbytes
 # PDF Processing
 PyMuPDF
 
-# Data Processing
+# Data Processing & Visualization
 pandas
+matplotlib
 
 # Data Validation
 pydantic

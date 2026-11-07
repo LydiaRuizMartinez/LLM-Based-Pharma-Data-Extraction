@@ -62,17 +62,39 @@ The resulting table is saved as **CSV** and **JSON** for further analysis.
 
 ```mermaid
 flowchart TD
-    A[Scientific publications · PDF] --> B[Text extraction · PyMuPDF]
-    B --> C[Tokenization and input truncation]
-    C --> D[Structured extraction prompt]
-    D --> E[Qwen2.5-3B-Instruct · 4-bit NF4]
-    E --> F[JSON response parsing]
-    F --> G[Pandas DataFrame]
-    G --> H[CSV dataset]
-    G --> I[JSON dataset]
-```
+    A["Scientific Publications (PDF)"]
+    B["Text Extraction (PyMuPDF)"]
+    C["Tokenization & Document Chunking"]
+    D["Structured Extraction Prompt"]
+    E["Qwen2.5-3B-Instruct (4-bit Quantization)"]
+    F["JSON Response Parsing"]
+    G["Chunk Results Aggregation"]
+    H["Pandas DataFrame"]
+    I["Data Quality Assessment"]
+    J["CSV Dataset"]
+    K["JSON Dataset"]
 
----
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+    I --> J
+    I --> K
+
+    classDef input fill:#172554,stroke:#60A5FA,color:#FFFFFF
+    classDef process fill:#1E293B,stroke:#94A3B8,color:#FFFFFF
+    classDef model fill:#4C1D95,stroke:#A78BFA,color:#FFFFFF
+    classDef output fill:#064E3B,stroke:#34D399,color:#FFFFFF
+
+    class A input
+    class B,C,D,F,G,H,I process
+    class E model
+    class J,K output
+```
 
 ## 🧪 Technical Setup
 
